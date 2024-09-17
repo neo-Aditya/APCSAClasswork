@@ -11,20 +11,20 @@ public class Calculator{
         else if(programNumber == 2) {
             long[] firstOdds = firstOdds(n);
             for (int i = 0; i < firstOdds.length; i++) {
-                System.out.println(firstOdds);
+                System.out.println(firstOdds[i]);
             }
         }
         else if(programNumber == 3) {
             long[] oddsTill = oddsTill(n);
             for (int i = 0; i < oddsTill.length; i++) {
-                System.out.println(oddsTill);
+                System.out.println(oddsTill[i]);
             }
         }
         else if(programNumber == 4) System.out.println(firstNaturalSum(n));
         else if(programNumber == 5) {
             long[] firstFibonacci = firstFibonacci(n);
             for (int i = 0; i < firstFibonacci.length; i++) {
-                System.out.println(firstFibonacci);
+                System.out.println(firstFibonacci[i]);
             }
         }
         else {
