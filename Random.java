@@ -30,4 +30,28 @@ public class Random {
         for (int i = 0; i < output.length; i++) output[i] = (int)((Math.random() * range) + min);
         return output;
     }
+
+    public static void whilePatternGame(Scanner sc) {
+        int guess = 7;
+        int number = generateRandom(1, 100, 1)[0];
+        while (guess > 0) {
+            int input = sc.nextInt();
+            if (input > number) {
+                System.out.println("Your guess was too high!");
+                guess = guess - 1;
+                System.out.println("You have " + guess + " guesses left!");
+            }
+            else if (input < number) {
+                System.out.println("Your guess was too low!");
+                guess = guess - 1;
+                System.out.println("You have " + guess + " guesses left!");
+            }
+            else {
+                System.out.println("You guessed the number!");
+                guess = 8 - guess;
+                System.out.println("You guessed the number in " + guess + " guesses!");
+                guess = guess - 100;
+            }
+        }
+    }
 }
