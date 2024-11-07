@@ -3,47 +3,37 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        Patterns patterns = new Patterns();
+        System.out.println("Size of Array");
+        int[] array = new int[sc.nextInt()];
 
-        System.out.println("How many lines?");
-        int input = sc.nextInt();
+        System.out.println("Enter Array Values: ");
+        for (int i = 0; i < array.length; i++) array[i] = sc.nextInt();
 
-        patterns.nestedForPatternOne(input);
+        System.out.print("Contents of Array: ");
+        Arrays.printElements(array);
 
-        System.out.println("\n");
-        patterns.nestedForPatternTwo(input);
+        System.out.println("\n Which number to look for?");
+        int target = sc.nextInt();
+        System.out.print(target);
+        if (Arrays.isInArray(array, target)) System.out.println(" is in the array");
+        else System.out.println(" is NOT in the array");
 
-        System.out.println("\n");
-        patterns.nestedForPatternThree(input);
+        System.out.print("Location/s: ");
+        Arrays.displayIndexof(array, target);
 
-        System.out.println("\n");
-        patterns.nestedForPatternFour(input);
+        System.out.println("Standard Deviation: " + Arrays.getStandardDeviation(array));
+        System.out.println("Max Value: " + Arrays.getMax(array));
+        System.out.println("Min Value: " + Arrays.getMin(array));
 
-        System.out.println("\n");
-        patterns.nestedForPatternFive(input);
+        System.out.println("Reversed: ");
+        int[] reverse = Arrays.getReverse(array);
+        boolean firstPrinted = false;
+        for (int value : reverse) {
+            if (firstPrinted) System.out.print(", ");
+            else firstPrinted = true;
+            System.out.print(value);
+        }
 
-        System.out.println("\n");
-        patterns.nestedForPatternSix(input);
-
-        System.out.println(" \n What number?");
-        input = sc.nextInt();
-
-        System.out.print("\n Sum of Digits: ");
-        patterns.whilePatternOne(input);
-        
-        System.out.print("\n Number of Digits: ");
-        patterns.whilePatternTwo(input);
-
-        System.out.print("\n Reverse: ");
-        patterns.whilePatternThree(input);
-
-        System.out.print("\n Sum of the Cube of Digits: ");
-        patterns.whilePatternFour(input);
-
-        System.out.print("\n Reverse, but with spaces: ");
-        patterns.whilePatternFive(input);
-
-        System.out.println("\n Random Game:");
-        Random.whilePatternGame(sc);
+        sc.close();
     }
 }

@@ -1,13 +1,13 @@
+import java.util.Scanner;
+
 public class ClassStuff {
     public static void main(String[] args) {
 
-        Student s1 = new Student();
-        
-        Student s2 = new Student();
+        Scanner sc = new Scanner(System.in);
+        int[] k = new int[sc.nextInt()];
 
-        Student s3 = new Student();
-        s1.display();
-        s2.display();
-        s3.display();
+        for (int i = 0; i < k.length; i++) k[i] = sc.nextInt();
+        for (int i : k) System.out.println(i);
+        sc.close();
     }
 }

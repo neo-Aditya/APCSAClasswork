@@ -1,7 +1,7 @@
-public class Student {
+public class ClassExample {
     static int count = 0;
 
-    Student() {
+    ClassExample() {
         count++;
     }
 
