@@ -18,4 +18,23 @@ public class Sort {
         }
         return sorted;
     }
+
+    public static int[] selection(int[] arr) {
+        int[] sorted = arr;
+        for (int i = 0; i < sorted.length - 1; i++) {
+            int temp = sorted[i];
+            int minIndex = i;
+            for (int j = i; j < sorted.length; j++) {
+                if (sorted[j] < sorted[minIndex]) {
+                    minIndex = j;
+                }
+            }
+            sorted[i] = sorted[minIndex];
+            sorted[minIndex] = temp;
+
+            Arrays.printElements(sorted);
+            System.out.println();
+        }
+        return sorted;
+    }
 }

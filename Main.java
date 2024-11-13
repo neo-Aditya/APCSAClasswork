@@ -10,8 +10,7 @@ public class Main {
         for (int i = 0; i < array.length; i++) array[i] = sc.nextInt();
 
         System.out.print("Sorted: \n");
-        // Arrays.printElements(Sort.bubble(array));
-        Sort.bubble(array);
+        Sort.selection(array);
 
         sc.close();
     }
