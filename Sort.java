@@ -37,4 +37,22 @@ public class Sort {
         }
         return sorted;
     }
+
+    public static int[] insertion(int[] arr) {
+        int[] sorted = arr;
+        for (int i = 1; i < sorted.length; i++) {
+            int index = i;
+            int j = i - 1;
+            while(j >= 0 && sorted[index] < sorted[j]) {
+                int temp = sorted[j];
+                sorted[j]  = sorted[index];
+                sorted[index] = temp;
+                index = j;
+                j--;
+            }
+            Arrays.printElements(sorted);
+            System.out.println();
+        }
+        return sorted;
+    }
 }
