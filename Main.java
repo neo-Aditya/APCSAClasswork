@@ -9,8 +9,9 @@ public class Main {
         System.out.println("Enter Array Values: ");
         for (int i = 0; i < array.length; i++) array[i] = sc.nextInt();
 
-        System.out.print("Sorted: \n");
-        Sort.insertion(array);
+        System.out.print("Reversed: \n");
+        Arrays.reverse(array);
+        Arrays.printElements(array);
 
         sc.close();
     }
