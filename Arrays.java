@@ -162,7 +162,7 @@ public class Arrays {
         else {
             for (int i = 0; i < array.length; i++) {
                 try {
-                    sum += array[i][array[i].length - i];
+                    sum += array[i][array[i].length - i - 1];
                 } catch (Exception e) {
                     return sum;
                 }
