@@ -192,4 +192,8 @@ public class Arrays {
         }
         return sums;
     }
+
+    public int[][] getColumnMajor(int[][] array) {
+        return transpose2d(array);
+    }
 }
