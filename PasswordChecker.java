@@ -21,7 +21,7 @@ public class PasswordChecker {
         return (s.length() - numLetters(s) - numDigits(s));
     }
 
-    public static String PasswordStrength(String s) {
+    public static String passwordStrength(String s) {
         if (s.length() >= 8 && numDigits(s) > 0 && numLetters(s) > 0 && numSymbols(s) > 0) return "strong";
         if ((s.length() >= 5 && numSymbols(s) > 0) || s.length() >= 8) return "medium";
         return "weak";
