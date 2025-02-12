@@ -1,11 +1,16 @@
-public class CircleVolume extends Circle {
+public class CircleVolume extends CircleArea {
     protected double volume = 0.0;
 
-    public void calculateVolume() {
+    @Override
+    public void calculate() {
+        super.calculate();
         volume = 4 * radius * radius * radius * Math.PI  / 3;
     }
 
-    public void displayVolume() {
+    @Override
+    public void display() {
+        super.display();
+        System.out.print("Area Is: ");
         System.out.println(volume);
     }
 }

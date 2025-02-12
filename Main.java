@@ -8,11 +8,8 @@ public class Main {
         CircleVolume circle= new CircleVolume();
         circle.setRadius(sc.nextDouble());
         System.out.print("Area is: ");
-        circle.calculateArea();
-        circle.displayArea();
-        System.out.print("Volume is: ");
-        circle.calculateVolume();
-        circle.displayVolume();
+        circle.calculate();
+        circle.display();
 
         System.out.println("\n");
 
@@ -25,7 +22,5 @@ public class Main {
         Teacher t = new Teacher();
         t.read(1, "Ms. Michael", 3, "Computer Science");
         t.display();
-
-
     }
 }
