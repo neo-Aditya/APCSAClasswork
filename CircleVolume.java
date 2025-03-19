@@ -1,5 +1,5 @@
 public class CircleVolume extends CircleArea {
-    protected double volume = 0.0;
+     double volume = 0.0;
 
     @Override
     public void calculate() {
